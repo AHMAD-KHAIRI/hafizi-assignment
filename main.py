@@ -6,13 +6,8 @@ app = Flask(__name__)
 app.config["SECRET_KEY"] = os.environ.get("FLASK_KEY")
 
 @app.route("/")
-@app.route("/A")
-def choice_a():
+def home():
     return render_template("a_index.html")
-
-@app.route("/B")
-def choice_b():
-    return render_template("b_index.html")
 
 @app.route("/team")
 def team():
